@@ -1,0 +1,5313 @@
+[
+  {
+    "name": "ConsumerGroupHeartBeat",
+    "sdk_method": "consumer_group_heart_beat",
+    "request_class": "ConsumerGroupHeartBeatRequest",
+    "description": "Huawei Cloud LTS operation ConsumerGroupHeartBeat.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "consumer_group_name": {
+          "type": "string"
+        },
+        "consumer_name": {
+          "type": "string"
+        },
+        "body": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateAccessConfig",
+    "sdk_method": "create_access_config",
+    "request_class": "CreateAccessConfigRequest",
+    "description": "Huawei Cloud LTS operation CreateAccessConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "access_config_name": {
+              "type": "string"
+            },
+            "access_config_type": {
+              "type": "string"
+            },
+            "access_config_detail": {
+              "type": "object",
+              "properties": {
+                "paths": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "black_paths": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "format": {
+                  "type": "object",
+                  "properties": {
+                    "single": {
+                      "type": "object",
+                      "properties": {
+                        "mode": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "multi": {
+                      "type": "object",
+                      "properties": {
+                        "mode": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "windows_log_info": {
+                  "type": "object",
+                  "properties": {
+                    "categorys": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "time_offset": {
+                      "type": "object",
+                      "properties": {
+                        "offset": {
+                          "type": "integer"
+                        },
+                        "unit": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "event_level": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "stdout": {
+                  "type": "boolean"
+                },
+                "stderr": {
+                  "type": "boolean"
+                },
+                "combine_stdout": {
+                  "type": "boolean"
+                },
+                "path_type": {
+                  "type": "string"
+                },
+                "namespace_regex": {
+                  "type": "string"
+                },
+                "pod_name_regex": {
+                  "type": "string"
+                },
+                "container_name_regex": {
+                  "type": "string"
+                },
+                "include_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "exclude_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "include_envs": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "exclude_envs": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "log_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "log_envs": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "include_k8s_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "exclude_k8s_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "log_k8s": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "repeat_collect": {
+                  "type": "boolean"
+                },
+                "system_fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "custom_key_value": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "include_labels_logical": {
+                  "type": "string"
+                },
+                "exclude_labels_logical": {
+                  "type": "string"
+                },
+                "include_k8s_labels_logical": {
+                  "type": "string"
+                },
+                "exclude_k8s_labels_logical": {
+                  "type": "string"
+                },
+                "include_envs_logical": {
+                  "type": "string"
+                },
+                "exclude_envs_logical": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "log_info": {
+              "type": "object",
+              "properties": {
+                "log_group_id": {
+                  "type": "string"
+                },
+                "log_stream_id": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "host_group_info": {
+              "type": "object",
+              "properties": {
+                "host_group_id_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            },
+            "access_config_tag": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "binary_collect": {
+              "type": "boolean"
+            },
+            "log_split": {
+              "type": "boolean"
+            },
+            "cluster_id": {
+              "type": "string"
+            },
+            "incremental_collect": {
+              "type": "boolean"
+            },
+            "encoding_format": {
+              "type": "string"
+            },
+            "processor_type": {
+              "type": "string"
+            },
+            "demo_log": {
+              "type": "string"
+            },
+            "demo_fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "field_name": {
+                    "type": "string"
+                  },
+                  "field_value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "processors": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "detail": {
+                    "type": "object",
+                    "properties": {
+                      "source_key": {
+                        "type": "string"
+                      },
+                      "regex": {
+                        "type": "string"
+                      },
+                      "keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "multi_line_regex": {
+                        "type": "string"
+                      },
+                      "keep_source": {
+                        "type": "boolean"
+                      },
+                      "keep_source_if_parse_error": {
+                        "type": "boolean"
+                      },
+                      "split_sep": {
+                        "type": "string"
+                      },
+                      "split_type": {
+                        "type": "string"
+                      },
+                      "fields": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "drop_keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "dest_keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "expand_depth": {
+                        "type": "integer"
+                      },
+                      "expand_connector": {
+                        "type": "string"
+                      },
+                      "source_format": {
+                        "type": "string"
+                      },
+                      "source_value": {
+                        "type": "string"
+                      },
+                      "set_time": {
+                        "type": "boolean"
+                      },
+                      "include": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "exclude": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "application_id": {
+              "type": "string"
+            },
+            "environment_id": {
+              "type": "string"
+            },
+            "component_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "access_config_type_source": {
+              "type": "string"
+            },
+            "recursive_depth": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateAgencyAccess",
+    "sdk_method": "create_agency_access",
+    "request_class": "CreateAgencyAccessRequest",
+    "description": "Huawei Cloud LTS operation CreateAgencyAccess.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "preview_agency_list": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "agency_access_type": {
+                    "type": "string"
+                  },
+                  "agency_log_access": {
+                    "type": "string"
+                  },
+                  "log_agency_stream_name": {
+                    "type": "string"
+                  },
+                  "log_agency_stream_id": {
+                    "type": "string"
+                  },
+                  "log_agency_group_name": {
+                    "type": "string"
+                  },
+                  "log_agency_group_id": {
+                    "type": "string"
+                  },
+                  "log_be_agencystream_name": {
+                    "type": "string"
+                  },
+                  "log_be_agencystream_id": {
+                    "type": "string"
+                  },
+                  "log_be_agencygroup_name": {
+                    "type": "string"
+                  },
+                  "log_be_agencygroup_id": {
+                    "type": "string"
+                  },
+                  "be_agency_project_id": {
+                    "type": "string"
+                  },
+                  "agency_project_id": {
+                    "type": "string"
+                  },
+                  "agency_domain_name": {
+                    "type": "string"
+                  },
+                  "agency_name": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateAomMappingRules",
+    "sdk_method": "create_aom_mapping_rules",
+    "request_class": "CreateAomMappingRulesRequest",
+    "description": "Huawei Cloud LTS operation CreateAomMappingRules.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "is_batch": {
+          "type": "boolean"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "project_id": {
+              "type": "string"
+            },
+            "rule_name": {
+              "type": "string"
+            },
+            "rule_id": {
+              "type": "string"
+            },
+            "rule_info": {
+              "type": "object",
+              "properties": {
+                "cluster_id": {
+                  "type": "string"
+                },
+                "cluster_name": {
+                  "type": "string"
+                },
+                "deployments_prefix": {
+                  "type": "string"
+                },
+                "deployments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "namespace": {
+                  "type": "string"
+                },
+                "container_name": {
+                  "type": "string"
+                },
+                "files": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "file_name": {
+                        "type": "string"
+                      },
+                      "log_stream_info": {
+                        "type": "object",
+                        "properties": {
+                          "target_log_group_id": {
+                            "type": "string"
+                          },
+                          "target_log_group_name": {
+                            "type": "string"
+                          },
+                          "target_log_stream_id": {
+                            "type": "string"
+                          },
+                          "target_log_stream_name": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateConsumerGroup",
+    "sdk_method": "create_consumer_group",
+    "request_class": "CreateConsumerGroupRequest",
+    "description": "Huawei Cloud LTS operation CreateConsumerGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "consumer_group_name": {
+              "type": "string"
+            },
+            "create_time": {
+              "type": "integer"
+            },
+            "log_group_id": {
+              "type": "string"
+            },
+            "log_stream_id": {
+              "type": "string"
+            },
+            "project_id": {
+              "type": "string"
+            },
+            "timeout": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateDashBoard",
+    "sdk_method": "create_dash_board",
+    "request_class": "CreateDashBoardRequest",
+    "description": "Huawei Cloud LTS operation CreateDashBoard.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "group_name": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateDashboardGroup",
+    "sdk_method": "create_dashboard_group",
+    "request_class": "CreateDashboardGroupRequest",
+    "description": "Huawei Cloud LTS operation CreateDashboardGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "group_name": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateHostGroup",
+    "sdk_method": "create_host_group",
+    "request_class": "CreateHostGroupRequest",
+    "description": "Huawei Cloud LTS operation CreateHostGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "host_group_name": {
+              "type": "string"
+            },
+            "host_group_type": {
+              "type": "string"
+            },
+            "host_id_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "host_group_tag": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateKeywordsAlarmRule",
+    "sdk_method": "create_keywords_alarm_rule",
+    "request_class": "CreateKeywordsAlarmRuleRequest",
+    "description": "Huawei Cloud LTS operation CreateKeywordsAlarmRule.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "keywords_alarm_rule_name": {
+              "type": "string"
+            },
+            "keywords_alarm_rule_description": {
+              "type": "string"
+            },
+            "keywords_requests": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "log_stream_id": {
+                    "type": "string"
+                  },
+                  "log_stream_name": {
+                    "type": "string"
+                  },
+                  "log_group_id": {
+                    "type": "string"
+                  },
+                  "log_group_name": {
+                    "type": "string"
+                  },
+                  "keywords": {
+                    "type": "string"
+                  },
+                  "condition": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "integer"
+                  },
+                  "search_time_range": {
+                    "type": "integer"
+                  },
+                  "search_time_range_unit": {
+                    "type": "string"
+                  },
+                  "custom_date": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "integer"
+                      },
+                      "start_unit": {
+                        "type": "string"
+                      },
+                      "end": {
+                        "type": "integer"
+                      },
+                      "end_unit": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "is_time_range_relative": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "frequency": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "cron_expr": {
+                  "type": "string"
+                },
+                "hour_of_day": {
+                  "type": "integer"
+                },
+                "day_of_week": {
+                  "type": "integer"
+                },
+                "fixed_rate": {
+                  "type": "integer"
+                },
+                "fixed_rate_unit": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "keywords_alarm_level": {
+              "type": "string"
+            },
+            "domain_id": {
+              "type": "string"
+            },
+            "trigger_condition_count": {
+              "type": "integer"
+            },
+            "trigger_condition_frequency": {
+              "type": "integer"
+            },
+            "whether_recovery_policy": {
+              "type": "boolean"
+            },
+            "recovery_policy": {
+              "type": "integer"
+            },
+            "notification_frequency": {
+              "type": "integer"
+            },
+            "alarm_action_rule_name": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "enterprise_project_id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateLogDumpObs",
+    "sdk_method": "create_log_dump_obs",
+    "request_class": "CreateLogDumpObsRequest",
+    "description": "Huawei Cloud LTS operation CreateLogDumpObs.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "log_group_id": {
+              "type": "string"
+            },
+            "log_stream_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "obs_bucket_name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "storage_format": {
+              "type": "string"
+            },
+            "switch_on": {
+              "type": "boolean"
+            },
+            "prefix_name": {
+              "type": "string"
+            },
+            "dir_prefix_name": {
+              "type": "string"
+            },
+            "period": {
+              "type": "integer"
+            },
+            "period_unit": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateLogGroup",
+    "sdk_method": "create_log_group",
+    "request_class": "CreateLogGroupRequest",
+    "description": "Huawei Cloud LTS operation CreateLogGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "enterprise_project_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "log_group_name": {
+              "type": "string"
+            },
+            "ttl_in_days": {
+              "type": "integer"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "log_group_name_alias": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateLogStream",
+    "sdk_method": "create_log_stream",
+    "request_class": "CreateLogStreamRequest",
+    "description": "Huawei Cloud LTS operation CreateLogStream.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "log_stream_name": {
+              "type": "string"
+            },
+            "ttl_in_days": {
+              "type": "integer"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "log_stream_name_alias": {
+              "type": "string"
+            },
+            "enterprise_project_name": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateLogStreamIndex",
+    "sdk_method": "create_log_stream_index",
+    "request_class": "CreateLogStreamIndexRequest",
+    "description": "Huawei Cloud LTS operation CreateLogStreamIndex.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "full_text_index": {
+              "type": "object",
+              "properties": {
+                "enable": {
+                  "type": "boolean"
+                },
+                "case_sensitive": {
+                  "type": "boolean"
+                },
+                "include_chinese": {
+                  "type": "boolean"
+                },
+                "tokenizer": {
+                  "type": "string"
+                },
+                "ascii": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "field_type": {
+                    "type": "string"
+                  },
+                  "field_name": {
+                    "type": "string"
+                  },
+                  "case_sensitive": {
+                    "type": "boolean"
+                  },
+                  "include_chinese": {
+                    "type": "boolean"
+                  },
+                  "tokenizer": {
+                    "type": "string"
+                  },
+                  "quick_analysis": {
+                    "type": "boolean"
+                  },
+                  "ascii": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "lts_sub_fields_info_list": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "field_type": {
+                          "type": "string"
+                        },
+                        "field_name": {
+                          "type": "string"
+                        },
+                        "quick_analysis": {
+                          "type": "boolean"
+                        },
+                        "field_analysis_alias": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "field_analysis_alias": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "sql_analysis_enable": {
+              "type": "boolean"
+            },
+            "log_stream_id": {
+              "type": "string"
+            },
+            "fast_analysis_sample_count": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateNotificationTemplate",
+    "sdk_method": "create_notification_template",
+    "request_class": "CreateNotificationTemplateRequest",
+    "description": "Huawei Cloud LTS operation CreateNotificationTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "desc": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "locale": {
+              "type": "string"
+            },
+            "templates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sub_type": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "topic": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateSearchCriterias",
+    "sdk_method": "create_search_criterias",
+    "request_class": "CreateSearchCriteriasRequest",
+    "description": "Huawei Cloud LTS operation CreateSearchCriterias.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "topic_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "criteria": {
+              "type": "string"
+            },
+            "eps_id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "search_type": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateSqlAlarmRule",
+    "sdk_method": "create_sql_alarm_rule",
+    "request_class": "CreateSqlAlarmRuleRequest",
+    "description": "Huawei Cloud LTS operation CreateSqlAlarmRule.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "sql_alarm_rule_name": {
+              "type": "string"
+            },
+            "is_css_sql": {
+              "type": "boolean"
+            },
+            "sql_alarm_rule_description": {
+              "type": "string"
+            },
+            "sql_requests": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "log_stream_id": {
+                    "type": "string"
+                  },
+                  "log_stream_name": {
+                    "type": "string"
+                  },
+                  "log_group_id": {
+                    "type": "string"
+                  },
+                  "log_group_name": {
+                    "type": "string"
+                  },
+                  "sql": {
+                    "type": "string"
+                  },
+                  "search_time_range": {
+                    "type": "integer"
+                  },
+                  "search_time_range_unit": {
+                    "type": "string"
+                  },
+                  "custom_date": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "integer"
+                      },
+                      "start_unit": {
+                        "type": "string"
+                      },
+                      "end": {
+                        "type": "integer"
+                      },
+                      "end_unit": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "is_time_range_relative": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "frequency": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "cron_expr": {
+                  "type": "string"
+                },
+                "hour_of_day": {
+                  "type": "integer"
+                },
+                "day_of_week": {
+                  "type": "integer"
+                },
+                "fixed_rate": {
+                  "type": "integer"
+                },
+                "fixed_rate_unit": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "condition_expression": {
+              "type": "string"
+            },
+            "sql_alarm_level": {
+              "type": "string"
+            },
+            "domain_id": {
+              "type": "string"
+            },
+            "trigger_condition_count": {
+              "type": "integer"
+            },
+            "trigger_condition_frequency": {
+              "type": "integer"
+            },
+            "whether_recovery_policy": {
+              "type": "boolean"
+            },
+            "recovery_policy": {
+              "type": "integer"
+            },
+            "notification_frequency": {
+              "type": "integer"
+            },
+            "alarm_action_rule_name": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "enterprise_project_id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateStructConfig",
+    "sdk_method": "create_struct_config",
+    "request_class": "CreateStructConfigRequest",
+    "description": "Huawei Cloud LTS operation CreateStructConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "log_group_id": {
+              "type": "string"
+            },
+            "log_stream_id": {
+              "type": "string"
+            },
+            "template_id": {
+              "type": "string"
+            },
+            "template_name": {
+              "type": "string"
+            },
+            "template_type": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateStructTemplate",
+    "sdk_method": "create_struct_template",
+    "request_class": "CreateStructTemplateRequest",
+    "description": "Huawei Cloud LTS operation CreateStructTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "demo_fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "is_analysis": {
+                    "type": "boolean"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "field_name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "user_defined_name": {
+                    "type": "string"
+                  },
+                  "index": {
+                    "type": "integer"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "tag_fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "field_name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "is_analysis": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "content": {
+              "type": "string"
+            },
+            "log_group_id": {
+              "type": "string"
+            },
+            "parse_type": {
+              "type": "string"
+            },
+            "log_stream_id": {
+              "type": "string"
+            },
+            "project_id": {
+              "type": "string"
+            },
+            "regex_rules": {
+              "type": "string"
+            },
+            "layers": {
+              "type": "integer"
+            },
+            "tokenizer": {
+              "type": "string"
+            },
+            "log_format": {
+              "type": "string"
+            },
+            "rule": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "param": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateTags",
+    "sdk_method": "create_tags",
+    "request_class": "CreateTagsRequest",
+    "description": "Huawei Cloud LTS operation CreateTags.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "resource_type": {
+          "type": "string"
+        },
+        "resource_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string"
+            },
+            "is_open": {
+              "type": "boolean"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "CreateTransfer",
+    "sdk_method": "create_transfer",
+    "request_class": "CreateTransferRequest",
+    "description": "Huawei Cloud LTS operation CreateTransfer.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "log_group_id": {
+              "type": "string"
+            },
+            "log_streams": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "log_stream_id": {
+                    "type": "string"
+                  },
+                  "log_stream_name": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "log_transfer_info": {
+              "type": "object",
+              "properties": {
+                "log_transfer_type": {
+                  "type": "string"
+                },
+                "log_transfer_mode": {
+                  "type": "string"
+                },
+                "log_storage_format": {
+                  "type": "string"
+                },
+                "log_transfer_status": {
+                  "type": "string"
+                },
+                "log_agency_transfer": {
+                  "type": "object",
+                  "properties": {
+                    "agency_domain_id": {
+                      "type": "string"
+                    },
+                    "agency_domain_name": {
+                      "type": "string"
+                    },
+                    "agency_name": {
+                      "type": "string"
+                    },
+                    "agency_project_id": {
+                      "type": "string"
+                    },
+                    "be_agency_domain_id": {
+                      "type": "string"
+                    },
+                    "be_agency_project_id": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "log_transfer_detail": {
+                  "type": "object",
+                  "properties": {
+                    "obs_period": {
+                      "type": "integer"
+                    },
+                    "obs_period_unit": {
+                      "type": "string"
+                    },
+                    "obs_bucket_name": {
+                      "type": "string"
+                    },
+                    "obs_encrypted_id": {
+                      "type": "string"
+                    },
+                    "obs_dir_pre_fix_name": {
+                      "type": "string"
+                    },
+                    "obs_prefix_name": {
+                      "type": "string"
+                    },
+                    "obs_time_zone": {
+                      "type": "string"
+                    },
+                    "obs_time_zone_id": {
+                      "type": "string"
+                    },
+                    "dis_id": {
+                      "type": "string"
+                    },
+                    "dis_name": {
+                      "type": "string"
+                    },
+                    "kafka_id": {
+                      "type": "string"
+                    },
+                    "kafka_topic": {
+                      "type": "string"
+                    },
+                    "obs_eps_id": {
+                      "type": "string"
+                    },
+                    "obs_encrypted_enable": {
+                      "type": "boolean"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "lts_tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "stream_tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "struct_fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "invalid_field_value": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "Createfavorite",
+    "sdk_method": "createfavorite",
+    "request_class": "CreatefavoriteRequest",
+    "description": "Huawei Cloud LTS operation Createfavorite.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "eps_id": {
+              "type": "string"
+            },
+            "favorite_resource_id": {
+              "type": "string"
+            },
+            "favorite_resource_type": {
+              "type": "string"
+            },
+            "log_group_id": {
+              "type": "string"
+            },
+            "log_group_name": {
+              "type": "string"
+            },
+            "log_stream_id": {
+              "type": "string"
+            },
+            "log_stream_name": {
+              "type": "string"
+            },
+            "is_global": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteAccessConfig",
+    "sdk_method": "delete_access_config",
+    "request_class": "DeleteAccessConfigRequest",
+    "description": "Huawei Cloud LTS operation DeleteAccessConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "access_config_id_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteActiveAlarms",
+    "sdk_method": "delete_active_alarms",
+    "request_class": "DeleteActiveAlarmsRequest",
+    "description": "Huawei Cloud LTS operation DeleteActiveAlarms.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "events": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "metadata": {
+                    "type": "object",
+                    "properties": {
+                      "event_type": {
+                        "type": "string"
+                      },
+                      "event_id": {
+                        "type": "string"
+                      },
+                      "event_severity": {
+                        "type": "string"
+                      },
+                      "event_name": {
+                        "type": "string"
+                      },
+                      "resource_type": {
+                        "type": "string"
+                      },
+                      "resource_id": {
+                        "type": "string"
+                      },
+                      "resource_provider": {
+                        "type": "string"
+                      },
+                      "lts_alarm_type": {
+                        "type": "string"
+                      },
+                      "log_group_name": {
+                        "type": "string"
+                      },
+                      "log_stream_name": {
+                        "type": "string"
+                      },
+                      "event_subtype": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "starts_at": {
+                    "type": "integer"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteAomMappingRules",
+    "sdk_method": "delete_aom_mapping_rules",
+    "request_class": "DeleteAomMappingRulesRequest",
+    "description": "Huawei Cloud LTS operation DeleteAomMappingRules.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteConsumerGroup",
+    "sdk_method": "delete_consumer_group",
+    "request_class": "DeleteConsumerGroupRequest",
+    "description": "Huawei Cloud LTS operation DeleteConsumerGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "consumer_group_name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteDashboard",
+    "sdk_method": "delete_dashboard",
+    "request_class": "DeleteDashboardRequest",
+    "description": "Huawei Cloud LTS operation DeleteDashboard.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "id": {
+          "type": "string"
+        },
+        "is_delete_charts": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteHostGroup",
+    "sdk_method": "delete_host_group",
+    "request_class": "DeleteHostGroupRequest",
+    "description": "Huawei Cloud LTS operation DeleteHostGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "host_group_id_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteKeywordsAlarmRule",
+    "sdk_method": "delete_keywords_alarm_rule",
+    "request_class": "DeleteKeywordsAlarmRuleRequest",
+    "description": "Huawei Cloud LTS operation DeleteKeywordsAlarmRule.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "keywords_alarm_rule_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteLogGroup",
+    "sdk_method": "delete_log_group",
+    "request_class": "DeleteLogGroupRequest",
+    "description": "Huawei Cloud LTS operation DeleteLogGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteLogStream",
+    "sdk_method": "delete_log_stream",
+    "request_class": "DeleteLogStreamRequest",
+    "description": "Huawei Cloud LTS operation DeleteLogStream.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteNotificationTemplate",
+    "sdk_method": "delete_notification_template",
+    "request_class": "DeleteNotificationTemplateRequest",
+    "description": "Huawei Cloud LTS operation DeleteNotificationTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "template_names": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteSearchCriterias",
+    "sdk_method": "delete_search_criterias",
+    "request_class": "DeleteSearchCriteriasRequest",
+    "description": "Huawei Cloud LTS operation DeleteSearchCriterias.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "topic_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "eps_id": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteSqlAlarmRule",
+    "sdk_method": "delete_sql_alarm_rule",
+    "request_class": "DeleteSqlAlarmRuleRequest",
+    "description": "Huawei Cloud LTS operation DeleteSqlAlarmRule.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "sql_alarm_rule_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteStructTemplate",
+    "sdk_method": "delete_struct_template",
+    "request_class": "DeleteStructTemplateRequest",
+    "description": "Huawei Cloud LTS operation DeleteStructTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DeleteTransfer",
+    "sdk_method": "delete_transfer",
+    "request_class": "DeleteTransferRequest",
+    "description": "Huawei Cloud LTS operation DeleteTransfer.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_transfer_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "Deletefavorite",
+    "sdk_method": "deletefavorite",
+    "request_class": "DeletefavoriteRequest",
+    "description": "Huawei Cloud LTS operation Deletefavorite.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "fav_res_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "DisableLogCollection",
+    "sdk_method": "disable_log_collection",
+    "request_class": "DisableLogCollectionRequest",
+    "description": "Huawei Cloud LTS operation DisableLogCollection.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "EnableLogCollection",
+    "sdk_method": "enable_log_collection",
+    "request_class": "EnableLogCollectionRequest",
+    "description": "Huawei Cloud LTS operation EnableLogCollection.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListAccessConfig",
+    "sdk_method": "list_access_config",
+    "request_class": "ListAccessConfigRequest",
+    "description": "Huawei Cloud LTS operation ListAccessConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "access_config_name_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "host_group_name_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "log_group_name_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "log_stream_name_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "access_config_tag_list": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListActiveOrHistoryAlarms",
+    "sdk_method": "list_active_or_history_alarms",
+    "request_class": "ListActiveOrHistoryAlarmsRequest",
+    "description": "Huawei Cloud LTS operation ListActiveOrHistoryAlarms.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "marker": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "step": {
+              "type": "integer"
+            },
+            "whether_custom_field": {
+              "type": "boolean"
+            },
+            "start_time": {
+              "type": "integer"
+            },
+            "end_time": {
+              "type": "integer"
+            },
+            "time_range": {
+              "type": "string"
+            },
+            "search": {
+              "type": "string"
+            },
+            "alarm_level_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "order_by": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "order": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListBreifStructTemplate",
+    "sdk_method": "list_breif_struct_template",
+    "request_class": "ListBreifStructTemplateRequest",
+    "description": "Huawei Cloud LTS operation ListBreifStructTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListCharts",
+    "sdk_method": "list_charts",
+    "request_class": "ListChartsRequest",
+    "description": "Huawei Cloud LTS operation ListCharts.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "limit": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListConsumerGroup",
+    "sdk_method": "list_consumer_group",
+    "request_class": "ListConsumerGroupRequest",
+    "description": "Huawei Cloud LTS operation ListConsumerGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListCriterias",
+    "sdk_method": "list_criterias",
+    "request_class": "ListCriteriasRequest",
+    "description": "Huawei Cloud LTS operation ListCriterias.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "topic_id": {
+          "type": "string"
+        },
+        "search_type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListDetailsConsumerGroup",
+    "sdk_method": "list_details_consumer_group",
+    "request_class": "ListDetailsConsumerGroupRequest",
+    "description": "Huawei Cloud LTS operation ListDetailsConsumerGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "consumer_group_name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListHistorySql",
+    "sdk_method": "list_history_sql",
+    "request_class": "ListHistorySqlRequest",
+    "description": "Huawei Cloud LTS operation ListHistorySql.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListHost",
+    "sdk_method": "list_host",
+    "request_class": "ListHostRequest",
+    "description": "Huawei Cloud LTS operation ListHost.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "host_id_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "filter": {
+              "type": "object",
+              "properties": {
+                "host_name_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "host_ip_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "host_status": {
+                  "type": "string"
+                },
+                "host_version": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListHostGroup",
+    "sdk_method": "list_host_group",
+    "request_class": "ListHostGroupRequest",
+    "description": "Huawei Cloud LTS operation ListHostGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "host_group_id_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "filter": {
+              "type": "object",
+              "properties": {
+                "host_group_type": {
+                  "type": "string"
+                },
+                "host_group_name_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "host_name_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "host_group_tag": {
+                  "type": "object",
+                  "properties": {
+                    "tag_type": {
+                      "type": "string"
+                    },
+                    "tag_list": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "key": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListKeywordsAlarmRules",
+    "sdk_method": "list_keywords_alarm_rules",
+    "request_class": "ListKeywordsAlarmRulesRequest",
+    "description": "Huawei Cloud LTS operation ListKeywordsAlarmRules.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListLogContext",
+    "sdk_method": "list_log_context",
+    "request_class": "ListLogContextRequest",
+    "description": "Huawei Cloud LTS operation ListLogContext.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "line_num": {
+              "type": "string"
+            },
+            "time__": {
+              "type": "string"
+            },
+            "backwards_size": {
+              "type": "integer"
+            },
+            "forwards_size": {
+              "type": "integer"
+            },
+            "scroll_id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListLogGroups",
+    "sdk_method": "list_log_groups",
+    "request_class": "ListLogGroupsRequest",
+    "description": "Huawei Cloud LTS operation ListLogGroups.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListLogHistogram",
+    "sdk_method": "list_log_histogram",
+    "request_class": "ListLogHistogramRequest",
+    "description": "Huawei Cloud LTS operation ListLogHistogram.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "start_time": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            },
+            "step_interval": {
+              "type": "integer"
+            },
+            "group_id": {
+              "type": "string"
+            },
+            "stream_id": {
+              "type": "string"
+            },
+            "key_word": {
+              "type": "string"
+            },
+            "is_iterative": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListLogStream",
+    "sdk_method": "list_log_stream",
+    "request_class": "ListLogStreamRequest",
+    "description": "Huawei Cloud LTS operation ListLogStream.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListLogStreams",
+    "sdk_method": "list_log_streams",
+    "request_class": "ListLogStreamsRequest",
+    "description": "Huawei Cloud LTS operation ListLogStreams.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_name": {
+          "type": "string"
+        },
+        "log_stream_name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListLogs",
+    "sdk_method": "list_logs",
+    "request_class": "ListLogsRequest",
+    "description": "Huawei Cloud LTS operation ListLogs.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "start_time": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "is_count": {
+              "type": "boolean"
+            },
+            "keywords": {
+              "type": "string"
+            },
+            "line_num": {
+              "type": "string"
+            },
+            "time__": {
+              "type": "string"
+            },
+            "is_desc": {
+              "type": "boolean"
+            },
+            "scroll_id": {
+              "type": "string"
+            },
+            "search_type": {
+              "type": "string"
+            },
+            "limit": {
+              "type": "integer"
+            },
+            "highlight": {
+              "type": "boolean"
+            },
+            "is_iterative": {
+              "type": "boolean"
+            },
+            "query": {
+              "type": "string"
+            },
+            "is_analysis_query": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListNotificationTemplate",
+    "sdk_method": "list_notification_template",
+    "request_class": "ListNotificationTemplateRequest",
+    "description": "Huawei Cloud LTS operation ListNotificationTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "templates": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListNotificationTemplates",
+    "sdk_method": "list_notification_templates",
+    "request_class": "ListNotificationTemplatesRequest",
+    "description": "Huawei Cloud LTS operation ListNotificationTemplates.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "limit": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListNotificationTopics",
+    "sdk_method": "list_notification_topics",
+    "request_class": "ListNotificationTopicsRequest",
+    "description": "Huawei Cloud LTS operation ListNotificationTopics.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "limit": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListQueryAllSearchCriterias",
+    "sdk_method": "list_query_all_search_criterias",
+    "request_class": "ListQueryAllSearchCriteriasRequest",
+    "description": "Huawei Cloud LTS operation ListQueryAllSearchCriterias.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListQueryStructuredLogs",
+    "sdk_method": "list_query_structured_logs",
+    "request_class": "ListQueryStructuredLogsRequest",
+    "description": "Huawei Cloud LTS operation ListQueryStructuredLogs.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "start_time": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            },
+            "sql_expression": {
+              "type": "string"
+            },
+            "original_content": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListSqlAlarmRules",
+    "sdk_method": "list_sql_alarm_rules",
+    "request_class": "ListSqlAlarmRulesRequest",
+    "description": "Huawei Cloud LTS operation ListSqlAlarmRules.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListStructTemplate",
+    "sdk_method": "list_struct_template",
+    "request_class": "ListStructTemplateRequest",
+    "description": "Huawei Cloud LTS operation ListStructTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListStructuredLogsWithTimeRange",
+    "sdk_method": "list_structured_logs_with_time_range",
+    "request_class": "ListStructuredLogsWithTimeRangeRequest",
+    "description": "Huawei Cloud LTS operation ListStructuredLogsWithTimeRange.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_stream_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string"
+            },
+            "format": {
+              "type": "string"
+            },
+            "time_range": {
+              "type": "object",
+              "properties": {
+                "sql_time_zone": {
+                  "type": "string"
+                },
+                "start_time": {
+                  "type": "integer"
+                },
+                "end_time": {
+                  "type": "integer"
+                },
+                "start_time_gt": {
+                  "type": "boolean"
+                },
+                "end_time_lt": {
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "whether_to_rows": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListTimeLineTrafficStatistics",
+    "sdk_method": "list_time_line_traffic_statistics",
+    "request_class": "ListTimeLineTrafficStatisticsRequest",
+    "description": "Huawei Cloud LTS operation ListTimeLineTrafficStatistics.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "start_time": {
+              "type": "integer"
+            },
+            "end_time": {
+              "type": "integer"
+            },
+            "period": {
+              "type": "integer"
+            },
+            "resource_type": {
+              "type": "string"
+            },
+            "search_type": {
+              "type": "string"
+            },
+            "resource_id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListTopnTrafficStatistics",
+    "sdk_method": "list_topn_traffic_statistics",
+    "request_class": "ListTopnTrafficStatisticsRequest",
+    "description": "Huawei Cloud LTS operation ListTopnTrafficStatistics.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "end_time": {
+              "type": "integer"
+            },
+            "is_desc": {
+              "type": "boolean"
+            },
+            "resource_type": {
+              "type": "string"
+            },
+            "sort_by": {
+              "type": "string"
+            },
+            "start_time": {
+              "type": "integer"
+            },
+            "topn": {
+              "type": "integer"
+            },
+            "filter": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "search_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListTransfers",
+    "sdk_method": "list_transfers",
+    "request_class": "ListTransfersRequest",
+    "description": "Huawei Cloud LTS operation ListTransfers.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_transfer_type": {
+          "type": "string"
+        },
+        "log_group_name": {
+          "type": "string"
+        },
+        "log_stream_name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "RegisterDmsKafkaInstance",
+    "sdk_method": "register_dms_kafka_instance",
+    "request_class": "RegisterDmsKafkaInstanceRequest",
+    "description": "Huawei Cloud LTS operation RegisterDmsKafkaInstance.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "instance_id": {
+              "type": "string"
+            },
+            "kafka_name": {
+              "type": "string"
+            },
+            "connect_info": {
+              "type": "object",
+              "properties": {
+                "user_name": {
+                  "type": "string"
+                },
+                "pwd": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowAdminConfig",
+    "sdk_method": "show_admin_config",
+    "request_class": "ShowAdminConfigRequest",
+    "description": "Huawei Cloud LTS operation ShowAdminConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowAomMappingRule",
+    "sdk_method": "show_aom_mapping_rule",
+    "request_class": "ShowAomMappingRuleRequest",
+    "description": "Huawei Cloud LTS operation ShowAomMappingRule.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "rule_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowAomMappingRules",
+    "sdk_method": "show_aom_mapping_rules",
+    "request_class": "ShowAomMappingRulesRequest",
+    "description": "Huawei Cloud LTS operation ShowAomMappingRules.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowCursorByTime",
+    "sdk_method": "show_cursor_by_time",
+    "request_class": "ShowCursorByTimeRequest",
+    "description": "Huawei Cloud LTS operation ShowCursorByTime.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "shard_id": {
+          "type": "string"
+        },
+        "_from": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowCursorTime",
+    "sdk_method": "show_cursor_time",
+    "request_class": "ShowCursorTimeRequest",
+    "description": "Huawei Cloud LTS operation ShowCursorTime.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "shard_id": {
+          "type": "string"
+        },
+        "cursor": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowLogConvergeConfig",
+    "sdk_method": "show_log_converge_config",
+    "request_class": "ShowLogConvergeConfigRequest",
+    "description": "Huawei Cloud LTS operation ShowLogConvergeConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "member_account_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowLogStreamShards",
+    "sdk_method": "show_log_stream_shards",
+    "request_class": "ShowLogStreamShardsRequest",
+    "description": "Huawei Cloud LTS operation ShowLogStreamShards.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowMemberGroupAndStream",
+    "sdk_method": "show_member_group_and_stream",
+    "request_class": "ShowMemberGroupAndStreamRequest",
+    "description": "Huawei Cloud LTS operation ShowMemberGroupAndStream.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "member_account_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowNotificationTemplate",
+    "sdk_method": "show_notification_template",
+    "request_class": "ShowNotificationTemplateRequest",
+    "description": "Huawei Cloud LTS operation ShowNotificationTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "template_name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowStructTemplate",
+    "sdk_method": "show_struct_template",
+    "request_class": "ShowStructTemplateRequest",
+    "description": "Huawei Cloud LTS operation ShowStructTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateAccessConfig",
+    "sdk_method": "update_access_config",
+    "request_class": "UpdateAccessConfigRequest",
+    "description": "Huawei Cloud LTS operation UpdateAccessConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "access_config_id": {
+              "type": "string"
+            },
+            "access_config_name": {
+              "type": "string"
+            },
+            "access_config_detail": {
+              "type": "object",
+              "properties": {
+                "paths": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "black_paths": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "format": {
+                  "type": "object",
+                  "properties": {
+                    "single": {
+                      "type": "object",
+                      "properties": {
+                        "mode": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "multi": {
+                      "type": "object",
+                      "properties": {
+                        "mode": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "windows_log_info": {
+                  "type": "object",
+                  "properties": {
+                    "categorys": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "time_offset": {
+                      "type": "object",
+                      "properties": {
+                        "offset": {
+                          "type": "integer"
+                        },
+                        "unit": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "event_level": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "stdout": {
+                  "type": "boolean"
+                },
+                "stderr": {
+                  "type": "boolean"
+                },
+                "combine_stdout": {
+                  "type": "boolean"
+                },
+                "path_type": {
+                  "type": "string"
+                },
+                "namespace_regex": {
+                  "type": "string"
+                },
+                "pod_name_regex": {
+                  "type": "string"
+                },
+                "container_name_regex": {
+                  "type": "string"
+                },
+                "include_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "exclude_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "include_envs": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "exclude_envs": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "log_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "log_envs": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "include_k8s_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "exclude_k8s_labels": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "log_k8s": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "system_fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "custom_key_value": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "include_labels_logical": {
+                  "type": "string"
+                },
+                "exclude_labels_logical": {
+                  "type": "string"
+                },
+                "include_k8s_labels_logical": {
+                  "type": "string"
+                },
+                "exclude_k8s_labels_logical": {
+                  "type": "string"
+                },
+                "include_envs_logical": {
+                  "type": "string"
+                },
+                "exclude_envs_logical": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "host_group_info": {
+              "type": "object",
+              "properties": {
+                "host_group_id_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            },
+            "access_config_tag": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "log_split": {
+              "type": "boolean"
+            },
+            "binary_collect": {
+              "type": "boolean"
+            },
+            "cluster_id": {
+              "type": "string"
+            },
+            "incremental_collect": {
+              "type": "boolean"
+            },
+            "encoding_format": {
+              "type": "string"
+            },
+            "processor_type": {
+              "type": "string"
+            },
+            "demo_log": {
+              "type": "string"
+            },
+            "demo_fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "field_name": {
+                    "type": "string"
+                  },
+                  "field_value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "processors": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "detail": {
+                    "type": "object",
+                    "properties": {
+                      "source_key": {
+                        "type": "string"
+                      },
+                      "regex": {
+                        "type": "string"
+                      },
+                      "keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "multi_line_regex": {
+                        "type": "string"
+                      },
+                      "keep_source": {
+                        "type": "boolean"
+                      },
+                      "keep_source_if_parse_error": {
+                        "type": "boolean"
+                      },
+                      "split_sep": {
+                        "type": "string"
+                      },
+                      "split_type": {
+                        "type": "string"
+                      },
+                      "fields": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "drop_keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "dest_keys": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "expand_depth": {
+                        "type": "integer"
+                      },
+                      "expand_connector": {
+                        "type": "string"
+                      },
+                      "source_format": {
+                        "type": "string"
+                      },
+                      "source_value": {
+                        "type": "string"
+                      },
+                      "set_time": {
+                        "type": "boolean"
+                      },
+                      "include": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "exclude": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "application_id": {
+              "type": "string"
+            },
+            "environment_id": {
+              "type": "string"
+            },
+            "component_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateAlarmRuleStatus",
+    "sdk_method": "update_alarm_rule_status",
+    "request_class": "UpdateAlarmRuleStatusRequest",
+    "description": "Huawei Cloud LTS operation UpdateAlarmRuleStatus.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "alarm_rule_id": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateAomMappingRules",
+    "sdk_method": "update_aom_mapping_rules",
+    "request_class": "UpdateAomMappingRulesRequest",
+    "description": "Huawei Cloud LTS operation UpdateAomMappingRules.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "rule_id": {
+              "type": "string"
+            },
+            "project_id": {
+              "type": "string"
+            },
+            "rule_name": {
+              "type": "string"
+            },
+            "rule_info": {
+              "type": "object",
+              "properties": {
+                "cluster_id": {
+                  "type": "string"
+                },
+                "cluster_name": {
+                  "type": "string"
+                },
+                "deployments_prefix": {
+                  "type": "string"
+                },
+                "deployments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "namespace": {
+                  "type": "string"
+                },
+                "container_name": {
+                  "type": "string"
+                },
+                "files": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "file_name": {
+                        "type": "string"
+                      },
+                      "log_stream_info": {
+                        "type": "object",
+                        "properties": {
+                          "target_log_group_id": {
+                            "type": "string"
+                          },
+                          "target_log_group_name": {
+                            "type": "string"
+                          },
+                          "target_log_stream_id": {
+                            "type": "string"
+                          },
+                          "target_log_stream_name": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateCheckPoint",
+    "sdk_method": "update_check_point",
+    "request_class": "UpdateCheckPointRequest",
+    "description": "Huawei Cloud LTS operation UpdateCheckPoint.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "stream_id": {
+          "type": "string"
+        },
+        "consumer_group_name": {
+          "type": "string"
+        },
+        "consumer_name": {
+          "type": "string"
+        },
+        "body": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "shard_id": {
+                "type": "string"
+              },
+              "checkpoint": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateHostGroup",
+    "sdk_method": "update_host_group",
+    "request_class": "UpdateHostGroupRequest",
+    "description": "Huawei Cloud LTS operation UpdateHostGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "host_group_id": {
+              "type": "string"
+            },
+            "host_group_name": {
+              "type": "string"
+            },
+            "host_id_list": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "host_group_tag": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateKeywordsAlarmRule",
+    "sdk_method": "update_keywords_alarm_rule",
+    "request_class": "UpdateKeywordsAlarmRuleRequest",
+    "description": "Huawei Cloud LTS operation UpdateKeywordsAlarmRule.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "keywords_alarm_rule_id": {
+              "type": "string"
+            },
+            "keywords_alarm_rule_name": {
+              "type": "string"
+            },
+            "alarm_rule_alias": {
+              "type": "string"
+            },
+            "keywords_alarm_rule_description": {
+              "type": "string"
+            },
+            "keywords_requests": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "log_stream_id": {
+                    "type": "string"
+                  },
+                  "log_stream_name": {
+                    "type": "string"
+                  },
+                  "log_group_id": {
+                    "type": "string"
+                  },
+                  "log_group_name": {
+                    "type": "string"
+                  },
+                  "keywords": {
+                    "type": "string"
+                  },
+                  "condition": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "integer"
+                  },
+                  "search_time_range": {
+                    "type": "integer"
+                  },
+                  "search_time_range_unit": {
+                    "type": "string"
+                  },
+                  "custom_date": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "integer"
+                      },
+                      "start_unit": {
+                        "type": "string"
+                      },
+                      "end": {
+                        "type": "integer"
+                      },
+                      "end_unit": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "is_time_range_relative": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "frequency": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "cron_expr": {
+                  "type": "string"
+                },
+                "hour_of_day": {
+                  "type": "integer"
+                },
+                "day_of_week": {
+                  "type": "integer"
+                },
+                "fixed_rate": {
+                  "type": "integer"
+                },
+                "fixed_rate_unit": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "keywords_alarm_level": {
+              "type": "string"
+            },
+            "domain_id": {
+              "type": "string"
+            },
+            "trigger_condition_count": {
+              "type": "integer"
+            },
+            "trigger_condition_frequency": {
+              "type": "integer"
+            },
+            "whether_recovery_policy": {
+              "type": "boolean"
+            },
+            "recovery_policy": {
+              "type": "integer"
+            },
+            "notification_frequency": {
+              "type": "integer"
+            },
+            "alarm_action_rule_name": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "enterprise_project_id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateLogConvergeConfig",
+    "sdk_method": "update_log_converge_config",
+    "request_class": "UpdateLogConvergeConfigRequest",
+    "description": "Huawei Cloud LTS operation UpdateLogConvergeConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "member_account_id": {
+              "type": "string"
+            },
+            "member_project_id": {
+              "type": "string"
+            },
+            "create_time": {
+              "type": "integer"
+            },
+            "update_time": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "organization_id": {
+              "type": "string"
+            },
+            "management_account_id": {
+              "type": "string"
+            },
+            "management_project_id": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "log_mapping_config": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "source_log_group_id": {
+                    "type": "string"
+                  },
+                  "target_log_group_id": {
+                    "type": "string"
+                  },
+                  "target_log_group_name": {
+                    "type": "string"
+                  },
+                  "log_stream_config": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "source_log_stream_id": {
+                          "type": "string"
+                        },
+                        "target_log_stream_id": {
+                          "type": "string"
+                        },
+                        "target_log_stream_name": {
+                          "type": "string"
+                        },
+                        "target_log_stream_eps_id": {
+                          "type": "string"
+                        },
+                        "target_log_stream_ttl": {
+                          "type": "integer"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateLogGroup",
+    "sdk_method": "update_log_group",
+    "request_class": "UpdateLogGroupRequest",
+    "description": "Huawei Cloud LTS operation UpdateLogGroup.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "ttl_in_days": {
+              "type": "integer"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateLogStream",
+    "sdk_method": "update_log_stream",
+    "request_class": "UpdateLogStreamRequest",
+    "description": "Huawei Cloud LTS operation UpdateLogStream.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_group_id": {
+          "type": "string"
+        },
+        "log_stream_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "ttl_in_days": {
+              "type": "integer"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "whether_log_storage": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateNotificationTemplate",
+    "sdk_method": "update_notification_template",
+    "request_class": "UpdateNotificationTemplateRequest",
+    "description": "Huawei Cloud LTS operation UpdateNotificationTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "desc": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "locale": {
+              "type": "string"
+            },
+            "templates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sub_type": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "topic": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateSqlAlarmRule",
+    "sdk_method": "update_sql_alarm_rule",
+    "request_class": "UpdateSqlAlarmRuleRequest",
+    "description": "Huawei Cloud LTS operation UpdateSqlAlarmRule.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "sql_alarm_rule_id": {
+              "type": "string"
+            },
+            "sql_alarm_rule_name": {
+              "type": "string"
+            },
+            "alarm_rule_alias": {
+              "type": "string"
+            },
+            "is_css_sql": {
+              "type": "boolean"
+            },
+            "sql_alarm_rule_description": {
+              "type": "string"
+            },
+            "sql_requests": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "log_stream_id": {
+                    "type": "string"
+                  },
+                  "log_stream_name": {
+                    "type": "string"
+                  },
+                  "log_group_id": {
+                    "type": "string"
+                  },
+                  "log_group_name": {
+                    "type": "string"
+                  },
+                  "sql": {
+                    "type": "string"
+                  },
+                  "search_time_range": {
+                    "type": "integer"
+                  },
+                  "search_time_range_unit": {
+                    "type": "string"
+                  },
+                  "custom_date": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "integer"
+                      },
+                      "start_unit": {
+                        "type": "string"
+                      },
+                      "end": {
+                        "type": "integer"
+                      },
+                      "end_unit": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "is_time_range_relative": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "frequency": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "cron_expr": {
+                  "type": "string"
+                },
+                "hour_of_day": {
+                  "type": "integer"
+                },
+                "day_of_week": {
+                  "type": "integer"
+                },
+                "fixed_rate": {
+                  "type": "integer"
+                },
+                "fixed_rate_unit": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "condition_expression": {
+              "type": "string"
+            },
+            "sql_alarm_level": {
+              "type": "string"
+            },
+            "domain_id": {
+              "type": "string"
+            },
+            "trigger_condition_count": {
+              "type": "integer"
+            },
+            "trigger_condition_frequency": {
+              "type": "integer"
+            },
+            "whether_recovery_policy": {
+              "type": "boolean"
+            },
+            "recovery_policy": {
+              "type": "integer"
+            },
+            "notification_frequency": {
+              "type": "integer"
+            },
+            "alarm_action_rule_name": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "enterprise_project_id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateStructConfig",
+    "sdk_method": "update_struct_config",
+    "request_class": "UpdateStructConfigRequest",
+    "description": "Huawei Cloud LTS operation UpdateStructConfig.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "log_group_id": {
+              "type": "string"
+            },
+            "log_stream_id": {
+              "type": "string"
+            },
+            "template_id": {
+              "type": "string"
+            },
+            "template_name": {
+              "type": "string"
+            },
+            "template_type": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateStructTemplate",
+    "sdk_method": "update_struct_template",
+    "request_class": "UpdateStructTemplateRequest",
+    "description": "Huawei Cloud LTS operation UpdateStructTemplate.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "demo_fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "is_analysis": {
+                    "type": "boolean"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "field_name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "user_defined_name": {
+                    "type": "string"
+                  },
+                  "index": {
+                    "type": "integer"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "tag_fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "field_name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "is_analysis": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "content": {
+              "type": "string"
+            },
+            "log_group_id": {
+              "type": "string"
+            },
+            "parse_type": {
+              "type": "string"
+            },
+            "log_stream_id": {
+              "type": "string"
+            },
+            "project_id": {
+              "type": "string"
+            },
+            "regex_rules": {
+              "type": "string"
+            },
+            "layers": {
+              "type": "integer"
+            },
+            "tokenizer": {
+              "type": "string"
+            },
+            "log_format": {
+              "type": "string"
+            },
+            "rule": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "param": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateSwitch",
+    "sdk_method": "update_switch",
+    "request_class": "UpdateSwitchRequest",
+    "description": "Huawei Cloud LTS operation UpdateSwitch.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "log_converge_switch": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "UpdateTransfer",
+    "sdk_method": "update_transfer",
+    "request_class": "UpdateTransferRequest",
+    "description": "Huawei Cloud LTS operation UpdateTransfer.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "log_transfer_id": {
+              "type": "string"
+            },
+            "log_group_id": {
+              "type": "string"
+            },
+            "log_transfer_info": {
+              "type": "object",
+              "properties": {
+                "log_storage_format": {
+                  "type": "string"
+                },
+                "log_transfer_status": {
+                  "type": "string"
+                },
+                "log_transfer_detail": {
+                  "type": "object",
+                  "properties": {
+                    "obs_period": {
+                      "type": "integer"
+                    },
+                    "obs_period_unit": {
+                      "type": "string"
+                    },
+                    "obs_bucket_name": {
+                      "type": "string"
+                    },
+                    "obs_encrypted_id": {
+                      "type": "string"
+                    },
+                    "obs_dir_pre_fix_name": {
+                      "type": "string"
+                    },
+                    "obs_prefix_name": {
+                      "type": "string"
+                    },
+                    "obs_time_zone": {
+                      "type": "string"
+                    },
+                    "obs_time_zone_id": {
+                      "type": "string"
+                    },
+                    "dis_id": {
+                      "type": "string"
+                    },
+                    "dis_name": {
+                      "type": "string"
+                    },
+                    "kafka_id": {
+                      "type": "string"
+                    },
+                    "kafka_topic": {
+                      "type": "string"
+                    },
+                    "obs_eps_id": {
+                      "type": "string"
+                    },
+                    "obs_encrypted_enable": {
+                      "type": "boolean"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "lts_tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "stream_tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "struct_fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "invalid_field_value": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "log_streams": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "log_stream_id": {
+                    "type": "string"
+                  },
+                  "log_stream_name": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+]
