@@ -41,3 +41,36 @@ async def test_invoke_tool_uses_explicit_scope_and_serializes_result(monkeypatch
     assert seen["scope"].region == "region-placeholder"
     assert seen["scope"].project_id == "project-placeholder"
     assert result == {"log_groups": [{"log_group_name": "group-placeholder"}]}
+
+
+@pytest.mark.asyncio
+async def test_list_access_config_defaults_to_an_empty_filter_body():
+    config = LtsConfig.from_env(
+        {
+            "HUAWEI_ACCESS_KEY": "ak-placeholder",
+            "HUAWEI_SECRET_KEY": "sk-placeholder",
+            "HUAWEI_REGION": "cn-north-4",
+            "HUAWEI_PROJECT_ID": "project-placeholder",
+        }
+    )
+
+    class AccessConfigClient:
+        def list_access_config(self, request):
+            assert request.body is not None
+            assert request.body.to_dict() == {
+                "access_config_name_list": None,
+                "host_group_name_list": None,
+                "log_group_name_list": None,
+                "log_stream_name_list": None,
+                "access_config_tag_list": None,
+            }
+            return {"result": []}
+
+    result = await invoke_tool(
+        TOOL_BY_NAME["ListAccessConfig"],
+        {},
+        config=config,
+        client_factory=lambda _config, _scope: AccessConfigClient(),
+    )
+
+    assert result == {"result": []}
