@@ -29,6 +29,8 @@ async def invoke_tool(
     request_arguments = dict(arguments)
     region = request_arguments.pop("region", None)
     project_id = request_arguments.pop("project_id", None)
+    if spec.name == "ListAccessConfig" and "body" not in request_arguments:
+        request_arguments["body"] = {}
     scope = config.resolve_scope(region=region, project_id=project_id)
     request = apply_arguments(request_class(spec.request_class)(), request_arguments)
     client = client_factory(config, scope)
