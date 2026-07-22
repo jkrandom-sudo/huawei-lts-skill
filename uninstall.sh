@@ -2,16 +2,25 @@
 set -euo pipefail
 
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-INSTALL_DIR="${HUAWEI_LTS_INSTALL_DIR:-$HOME/.local/share/huawei-lts-skill}"
+INSTALL_DIR_INPUT="${HUAWEI_LTS_INSTALL_DIR:-$HOME/.local/share/huawei-lts-skill}"
 PLATFORMS=""
+
+usage() {
+  echo "Usage: ./uninstall.sh [--platforms cursor,claude,opencode,codex] [--install-dir PATH]"
+}
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --platforms) PLATFORMS="${2:?--platforms requires a value}"; shift 2 ;;
-    -h|--help) echo "Usage: ./uninstall.sh [--platforms cursor,claude,opencode,codex]"; exit 0 ;;
-    *) echo "Unknown option: $1" >&2; exit 2 ;;
+    --install-dir) INSTALL_DIR_INPUT="${2:?--install-dir requires a value}"; shift 2 ;;
+    -h|--help) usage; exit 0 ;;
+    *) echo "Unknown option: $1" >&2; usage >&2; exit 2 ;;
   esac
 done
+
+INSTALL_DIR="$(python3 "$SOURCE_DIR/scripts/deploy.py" resolve \
+  --source "$SOURCE_DIR" --destination "$INSTALL_DIR_INPUT" --home "$HOME" \
+  --platforms all)"
 
 MANAGER="$INSTALL_DIR/scripts/manage_install.py"
 DEPLOY="$INSTALL_DIR/scripts/deploy.py"
